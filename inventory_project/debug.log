@@ -1,0 +1,84 @@
+[2024-09-30 16:18:43,927] WARNING django.request Not Found: /items/
+[2024-09-30 16:18:44,680] WARNING django.request Not Found: /items/2/delete/
+[2024-09-30 16:18:45,358] WARNING django.request Not Found: /items/3/
+[2024-09-30 16:18:46,049] WARNING django.request Not Found: /items/4/update/
+[2024-09-30 16:20:04,720] WARNING django.request Not Found: /items/
+[2024-09-30 16:20:05,617] WARNING django.request Not Found: /items/2/delete/
+[2024-09-30 16:20:06,544] WARNING django.request Not Found: /items/3/
+[2024-09-30 16:20:07,445] WARNING django.request Not Found: /items/4/update/
+[2024-09-30 16:20:29,971] WARNING django.request Not Found: /items/
+[2024-09-30 16:20:30,891] WARNING django.request Not Found: /items/2/delete/
+[2024-09-30 16:20:31,885] WARNING django.request Not Found: /items/3/
+[2024-09-30 16:20:32,860] WARNING django.request Not Found: /items/4/update/
+[2024-09-30 16:22:59,709] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:28:43,871] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:29:14,911] WARNING django.request Not Found: /items/
+[2024-09-30 16:29:15,580] WARNING django.request Not Found: /items/2/delete/
+[2024-09-30 16:29:16,240] WARNING django.request Not Found: /items/3/
+[2024-09-30 16:29:16,897] WARNING django.request Not Found: /items/4/update/
+[2024-09-30 16:29:29,580] WARNING django.request Not Found: /items/
+[2024-09-30 16:29:30,243] WARNING django.request Not Found: /items/2/delete/
+[2024-09-30 16:29:30,907] WARNING django.request Not Found: /items/3/
+[2024-09-30 16:29:31,610] WARNING django.request Not Found: /items/4/update/
+[2024-09-30 16:33:17,747] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:33:22,336] INFO django.server "POST /login/ HTTP/1.1" 200 483
+[2024-09-30 16:33:37,334] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:33:37,335] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:34:08,661] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:34:08,662] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:35:14,266] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:35:14,267] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:35:29,439] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:35:29,439] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:35:42,208] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:35:42,210] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:37:23,144] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:37:23,145] WARNING django.server "POST /items/ HTTP/1.1" 401 58
+[2024-09-30 16:37:41,155] INFO django.utils.autoreload C:\Users\Adil\Desktop\Inventory Management System\inventory_project\inventory\views.py changed, reloading.
+[2024-09-30 16:37:41,846] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:37:52,134] INFO django.utils.autoreload C:\Users\Adil\Desktop\Inventory Management System\inventory_project\inventory\views.py changed, reloading.
+[2024-09-30 16:37:52,859] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:37:56,297] INFO django.server "POST /items/ HTTP/1.1" 201 186
+[2024-09-30 16:38:17,535] WARNING django.request Unauthorized: /items/7/delete/
+[2024-09-30 16:38:17,536] WARNING django.server "GET /items/7/delete/ HTTP/1.1" 401 58
+[2024-09-30 16:38:26,960] INFO django.utils.autoreload C:\Users\Adil\Desktop\Inventory Management System\inventory_project\inventory\views.py changed, reloading.
+[2024-09-30 16:38:27,856] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:38:31,357] WARNING django.request Unauthorized: /items/7/delete/
+[2024-09-30 16:38:31,358] WARNING django.server "DELETE /items/7/delete/ HTTP/1.1" 401 183
+[2024-09-30 16:38:53,699] INFO django.server "DELETE /items/7/delete/ HTTP/1.1" 204 40
+[2024-09-30 16:39:05,306] WARNING django.request Unauthorized: /items/7/
+[2024-09-30 16:39:05,307] WARNING django.server "DELETE /items/7/ HTTP/1.1" 401 58
+[2024-09-30 16:39:12,123] WARNING django.request Unauthorized: /items/7/
+[2024-09-30 16:39:12,124] WARNING django.server "GET /items/7/ HTTP/1.1" 401 58
+[2024-09-30 16:39:24,323] WARNING django.request Unauthorized: /items/8/
+[2024-09-30 16:39:24,324] WARNING django.server "GET /items/8/ HTTP/1.1" 401 58
+[2024-09-30 16:39:51,892] INFO django.utils.autoreload C:\Users\Adil\Desktop\Inventory Management System\inventory_project\inventory\views.py changed, reloading.
+[2024-09-30 16:39:52,751] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:39:55,497] WARNING django.request Not Found: /items/8/
+[2024-09-30 16:39:55,497] WARNING django.server "GET /items/8/ HTTP/1.1" 404 27
+[2024-09-30 16:40:01,237] WARNING django.request Not Found: /items/9/
+[2024-09-30 16:40:01,238] WARNING django.server "GET /items/9/ HTTP/1.1" 404 27
+[2024-09-30 16:40:28,453] INFO django.server "GET /items/5/ HTTP/1.1" 200 182
+[2024-09-30 16:40:51,131] ERROR django.request Internal Server Error: /items/5/update
+Traceback (most recent call last):
+  File "C:\Users\Adil\AppData\Local\miniconda3\envs\inventory_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Adil\AppData\Local\miniconda3\envs\inventory_env\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Adil\AppData\Local\miniconda3\envs\inventory_env\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Adil\AppData\Local\miniconda3\envs\inventory_env\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/items/5/update/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2024-09-30 16:40:51,135] ERROR django.server "PUT /items/5/update HTTP/1.1" 500 73455
+[2024-09-30 16:41:06,559] INFO django.server "PUT /items/5/update/ HTTP/1.1" 200 185
+[2024-09-30 16:41:12,303] WARNING django.request Method Not Allowed: /items/5/
+[2024-09-30 16:41:12,304] WARNING django.server "PUT /items/5/ HTTP/1.1" 405 40
+[2024-09-30 16:41:17,971] INFO django.server "GET /items/5/ HTTP/1.1" 200 185
+[2024-09-30 16:41:35,306] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:41:35,972] WARNING django.request Unauthorized: /items/2/delete/
+[2024-09-30 16:41:36,653] WARNING django.request Unauthorized: /items/3/
+[2024-09-30 16:41:37,371] WARNING django.request Unauthorized: /items/4/update/
