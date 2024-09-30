@@ -50,7 +50,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+# @authentication_classes([TokenAuthentication])
 def create_item(request):
     serializer = ItemSerializer(data=request.data)
     if serializer.is_valid():
@@ -63,7 +63,7 @@ def create_item(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+# @authentication_classes([TokenAuthentication])
 
 def read_item(request, item_id):
     item = cache.get(f'item_{item_id}')
@@ -79,7 +79,7 @@ def read_item(request, item_id):
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+# @authentication_classes([TokenAuthentication])
 
 def update_item(request, item_id):
     try:
@@ -95,7 +95,7 @@ def update_item(request, item_id):
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+# @authentication_classes([TokenAuthentication])
 
 def delete_item(request, item_id):
     try:
@@ -117,7 +117,7 @@ def delete_item(request, item_id):
 from django.core.cache import cache
 from django.http import JsonResponse
 
-@authentication_classes([TokenAuthentication])
+# @authentication_classes([TokenAuthentication])
 def test_redis(request):
     cache.set('my_key', 'Hello from Redis!', timeout=60)  
     value = cache.get('my_key') 
