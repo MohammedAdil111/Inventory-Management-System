@@ -82,3 +82,7 @@ RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash an
 [2024-09-30 16:41:35,972] WARNING django.request Unauthorized: /items/2/delete/
 [2024-09-30 16:41:36,653] WARNING django.request Unauthorized: /items/3/
 [2024-09-30 16:41:37,371] WARNING django.request Unauthorized: /items/4/update/
+[2024-09-30 16:55:29,509] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:55:57,817] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2024-09-30 16:56:00,197] WARNING django.request Unauthorized: /items/
+[2024-09-30 16:56:00,197] WARNING django.server "POST /items/ HTTP/1.1" 401 58
