@@ -1,0 +1,214 @@
+Setup MySQL Database:
+Start MySQL Server: Ensure that your MySQL server is running.
+Create Database: CREATE DATABASE inventory_db;
+Create User and Grant Permissions:  CREATE USER 'Adil'@'localhost' IDENTIFIED BY 'Adil@111';
+GRANT ALL PRIVILEGES ON inventory_db.* TO 'Adil'@'localhost';
+FLUSH PRIVILEGES;
+
+
+To Run the test.py :
+
+python manage.py test inventory.tests
+
+
+
+API Documentation :
+
+Authentication
+Register User
+Endpoint: /register/
+
+Method: POST
+
+Description: Register a new user.
+
+Request Body: json
+{
+    "username": "new_user",
+    "email": "new_user@example.com",
+    "password": "your_secure_password",
+    "first_name": "First",
+    "last_name": "Last"
+}
+Response: Success (201 Created): {
+    "id": 2,
+    "username": "new_user",
+    "email": "new_user@example.com",
+    "first_name": "First",
+    "last_name": "Last"
+}
+Error (400 Bad Request): {
+    "username": ["This field is required."],
+    "password": ["This field is required."]
+}
+
+Login User : Endpoint: /login/
+Method: POST
+Description: Authenticate a user and obtain authentication tokens.
+Request Body:{
+    "username": "Adil",
+    "password": "Adil@111"
+}
+Response: Success (200 OK):{
+    "refresh": "your_refresh_token_here",
+    "access": "your_access_token_here"
+}
+Error (401 Unauthorized):{
+    "detail": "No active account found with the given credentials"
+}
+
+Create Item : Endpoint: /items/
+Method: POST
+Description: Create a new inventory item.
+Request Body: {
+    "name": "New Item",
+    "description": "This is a new item description",
+    "quantity": 10,
+    "price": 15.00
+}
+Response:
+
+Success (201 Created):{
+    "id": 1,
+    "name": "New Item",
+    "description": "This is a new item description",
+    "quantity": 10,
+    "price": "15.00",
+    "created_at": "2024-09-30T06:43:22.603745Z",
+    "updated_at": "2024-09-30T06:43:22.603745Z"
+}
+Error (400 Bad Request):{
+    "name": ["This field is required."]
+}
+
+Read Item :  Endpoint: /items/<int:item_id>/
+Method: GET
+Description: Retrieve details of a specific inventory item.
+Response:Success (200 OK): {
+    "id": 1,
+    "name": "New Item",
+    "description": "This is a new item description",
+    "quantity": 10,
+    "price": "15.00",
+    "created_at": "2024-09-30T06:43:22.603745Z",
+    "updated_at": "2024-09-30T06:43:22.603745Z"
+}
+Error (404 Not Found):{
+    "error": "Item not found."
+}
+
+
+Update Item :Endpoint: /items/<int:item_id>/update/
+Method: PUT
+Description: Update details of a specific inventory item.
+Request Body: {
+    "name": "Updated Item",
+    "description": "Updated description",
+    "quantity": 15,
+    "price": 20.00
+}
+Response: Success (200 OK):{
+    "id": 1,
+    "name": "Updated Item",
+    "description": "Updated description",
+    "quantity": 15,
+    "price": "20.00",
+    "created_at": "2024-09-30T06:43:22.603745Z",
+    "updated_at": "2024-10-01T08:15:30.123456Z"
+}
+Error (400 Bad Request):{
+    "quantity": ["A valid integer is required."]
+}
+Error (404 Not Found): {
+    "error": "Item not found."
+}
+
+
+Delete Item : Endpoint: /items/<int:item_id>/delete/
+Method: DELETE
+Description: Delete a specific inventory item.
+Response: Success (204 No Content): No content returned.
+Error (404 Not Found):{
+    "error": "Item not found."
+}
+
+
+Usage Examples
+Using Postman :
+1. Register a New User
+2.Method: POST
+3.URL: http://127.0.0.1:8000/register/
+4.Authorization : select bearer Authorization and paste the access token
+5. Body (raw JSON) :
+Body (raw JSON):{
+    "username": "Adil",
+    "email": "adil@example.com",
+    "password": "Adil@111",
+    "first_name": "Adil",
+    "last_name": "Khan"
+}
+6. Response:
+Success (201 Created): User details without password.
+Error (400 Bad Request): Validation errors
+
+
+Create an Inventory Item
+
+1.Method: POST
+2.URL: http://127.0.0.1:8000/items/
+3.Authorization : select bearer Authorization and paste the access token
+4.Body (raw JSON):{
+    "name": "Laptop",
+    "description": "Dell XPS 13",
+    "quantity": 5,
+    "price": 999.99
+}
+5. Response:
+Success (201 Created): Details of the created item.
+Error (400 Bad Request): Validation errors.
+Error (401 Unauthorized): Missing or invalid token.
+
+Read an Inventory Item
+
+1.Method: GET
+2.URL: http://127.0.0.1:8000/items/1/
+3.Authorization : select bearer Authorization and paste the access token
+4.Response:
+Success (200 OK): Details of the item.
+Error (404 Not Found): Item does not exist.
+Error (401 Unauthorized): Missing or invalid token.
+
+
+ Update an Inventory Item :
+
+1.Method: PUT
+2.URL: http://127.0.0.1:8000/items/1/update/
+3.Authorization : select bearer Authorization and paste the access token
+4.Body (raw JSON):{
+    "name": "Laptop Pro",
+    "description": "Dell XPS 15",
+    "quantity": 3,
+    "price": 1299.99
+}
+5.Response:
+Success (200 OK): Updated item details.
+Error (400 Bad Request): Validation errors.
+Error (404 Not Found): Item does not exist.
+Error (401 Unauthorized): Missing or invalid token.
+
+
+ Delete an Inventory Item :
+
+1.Method: DELETE
+2.URL: http://127.0.0.1:8000/items/1/delete/
+3.Authorization : select bearer Authorization and paste the access token
+4. Response:
+Success (204 No Content): Item deleted successfully.
+Error (404 Not Found): Item does not exist.
+Error (401 Unauthorized): Missing or invalid token.
+
+
+
+
+
+
