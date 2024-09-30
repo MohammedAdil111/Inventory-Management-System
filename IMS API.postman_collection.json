@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "81e9277f-1249-433c-a375-0fa807e022b9",
+		"name": "IMS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38681741"
+	},
+	"item": [
+		{
+			"name": "Create_item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3Njk3ODAyLCJpYXQiOjE3Mjc2OTQyMDIsImp0aSI6IjBjOTllNTY4NGZjZTRiOTJiOTdkZjU0NGE5NzY2ZDIwIiwidXNlcl9pZCI6MX0.M_c1JYx8b4ZqNNZeagUphUr-oEWibSK5Zd2k2fuLC88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3Njk3ODAyLCJpYXQiOjE3Mjc2OTQyMDIsImp0aSI6IjBjOTllNTY4NGZjZTRiOTJiOTdkZjU0NGE5NzY2ZDIwIiwidXNlcl9pZCI6MX0.M_c1JYx8b4ZqNNZeagUphUr-oEWibSK5Zd2k2fuLC88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test 12\",\r\n    \"description\": \"description test for item 12 \",\r\n    \"price\": 20.00,\r\n    \"quantity\":20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/items/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3NjgxNzk3LCJpYXQiOjE3Mjc2NzgxOTcsImp0aSI6IjRmMzkzYTdiNGJkOTQ5MzhiZGIyNWUzZTJiZTBmMzRiIiwidXNlcl9pZCI6MX0.QHC5qdyRfTC9DnXW9cKDrxDDuaforEO68kidQUCgo9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3NjgxNzk3LCJpYXQiOjE3Mjc2NzgxOTcsImp0aSI6IjRmMzkzYTdiNGJkOTQ5MzhiZGIyNWUzZTJiZTBmMzRiIiwidXNlcl9pZCI6MX0.QHC5qdyRfTC9DnXW9cKDrxDDuaforEO68kidQUCgo9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/items/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register_user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Redis_connect",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Log_in",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get_item",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update_item",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
